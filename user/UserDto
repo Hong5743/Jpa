@@ -1,0 +1,35 @@
+@Entity
+@Table(name = "user")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Builder
+public class UserDto {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int user_no;
+    @Column(nullable = false, unique = true)
+    private String user_id;
+    @Column(nullable = false)
+    private String user_passwd;
+    @Column(nullable = false)
+    private String user_name;
+    @Column(nullable = false, unique = true)
+    private String user_nickname;
+    @Column(nullable = false, unique = true)
+    private String user_email;
+    @Column(nullable = false, unique = true)
+    private String user_tell;
+    @Column(nullable = false)
+    private OffsetDateTime user_birth;
+    @Column(nullable = false)
+    private OffsetDateTime user_regdate;
+    @Column
+    private OffsetDateTime user_withdraw;
+    @Column
+    private int user_grade;
+    @Column
+    private int user_state;
+}
