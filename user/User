@@ -6,7 +6,7 @@
 @NoArgsConstructor
 @ToString
 @Builder
-public class UserDto {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int user_no;
@@ -30,6 +30,8 @@ public class UserDto {
     private OffsetDateTime user_withdraw;
     @Column
     private int user_grade;
+    @Enumerated(EnumType.STRING)
+    private  UserRole role;
     @Column
     private int user_state;
 }
